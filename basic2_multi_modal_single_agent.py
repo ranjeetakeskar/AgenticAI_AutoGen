@@ -19,4 +19,6 @@ async def main():
     )
     await Console (assistant.run_stream(task=multimodal_message))
 
+    await openai_model_client.close()
+
 asyncio.run(main())
